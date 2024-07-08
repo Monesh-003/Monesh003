@@ -1,0 +1,279 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+body{
+  background-color: #000000;
+  color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.full{
+  position: relative;
+  background-color: #000000;
+}
+.top{
+  position: relative;
+  background-color:red;
+  top: 0%;
+  right:-0%;
+  width: 1085px;
+  padding-left: 250px;
+}
+.main{
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  color: white;
+  font-size: 150%;
+  text-decoration: none;
+}
+.two{
+  position: absolute;
+  top: 111px;
+  right: 50px;
+  font-size: 150%;
+}
+.smalline{
+  position: absolute;
+  top: 280px;
+  right: 32%;
+  color: darkmagenta;
+  font-family: Georgia;
+  font-style: italic;
+
+}
+.concent{
+  position: absolute;
+  top:300px ;
+  right: 30% ;
+  font-size: 240%;
+}
+.longline{
+  position: absolute;
+  top: 600px; 
+  right: 37%;
+}
+.smallbutton{
+  position: absolute;
+  top: 770px;
+  left: 39%;
+}
+.siximg{
+  position: absolute;
+  top: 780px;
+  left: 17%;
+}
+.aimage{
+  position: absolute;
+  top: 1000px;
+  left:-10%;
+  filter: contrast(3);
+}
+.aimage.svg{
+  height: 100px;
+  width: 50px;
+}
+.bimage{
+  position: absolute;
+  top: 1800px;
+  right:25%;
+
+}
+
+.centervideo{
+  position: absolute;
+  top: 2700px;
+  left: 20%;
+  
+}
+.nextfull{
+  position: absolute;
+  top: -900px;
+  left: 1%;
+}
+.fimage{
+  position: absolute;
+  top: 3550px;
+  left: 20%;
+}
+.smallbox{
+  position: absolute;
+  top: 4450px;
+  left: 14%;
+  background-color: darkmagenta;
+  padding: 10px 170px 10px 170px ;
+}
+.sb{
+  font-size: 180%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.triangleimg{
+  position:absolute;
+  top: 4760px;
+  left: -6%;
+  filter: contrast(3);
+}
+.white{
+  position: relative;
+  top: 5150px;
+  left: -7%;
+  background-color: white;
+  filter: contrast(2);
+}
+.smalllitter{
+  position: absolute;
+  top: -20%;
+  font-size: 50px;
+  color:#000000;
+  left: 30%;
+}
+.smone{
+  position: absolute;
+  top: 220px;;
+}
+.smtwo{
+  position: absolute;
+  top: 750px;
+  left: 3%;
+  filter: contrast(3);
+}
+.smtwo.svg{
+  height: 800px;
+  width: 5500px;
+}
+.contone{
+  position: absolute;
+  top: 6800px;
+  color: white;
+  font-size: 60px;
+  left: 7%;
+  text-align: center;
+}
+.conttwo{
+  position: absolute;
+  top: 7500px;
+  left: 15%;
+  filter: contrast(2);
+}
+.subtwo{
+  position: absolute;
+  top: -30px;
+  left: 105%;
+  font-size:25px;
+}
+.contree{
+  position: absolute;
+  top: 8000px;
+  left: 19%;
+  font-size: 25px;
+  filter: contrast(1);
+}
+.subtree{
+  position: absolute;
+  left: 105%;
+}
+.contfour{
+  position: absolute;
+  top: 8500px;
+  left: 15%;
+  filter: contrast(1);
+}
+.subfour{
+  position: absolute;
+  top: -30px;
+  left: 105%;
+  font-size:25px;
+}
+.lineimgone{
+  position: absolute;
+  top: 9000px;
+  right: 10%;
+  filter: contrast(3);
+}
+.bgtwo{
+  position: absolute;
+  top: 9700px;
+  left: -4%;
+}
+.lastone{
+  position: absolute;
+  top: 9700px;
+  color: black;
+  font-size: 35px;
+  left: 15%;
+}
+.lastsubone{
+position: absolute;
+left: 25%;
+}
+.arrowimg{
+  position: absolute;
+  top: 10100px;
+  left: -14%;
+}
+.pinkbg{
+  position: absolute;
+  top: 10469px;
+  right: 9%;
+}
+.lastline{
+  position: absolute;
+  top: 10500px;
+  text-align: center;
+  left: 20%;
+  font-size: 30px;
+}
+.lastlineimg{
+  position: absolute;
+  top: 10773px;
+  right: 9%;
+  
+}
+.last{
+  position: absolute;
+  top: 10970px;
+  background: black;
+  width: 1500px;
+  height: 200px;
+  padding: 50px;
+  border: 3px solid red;
+  box-sizing: border-box;
+  right: 9%;
+}

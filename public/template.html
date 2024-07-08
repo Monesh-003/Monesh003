@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+<style>
+a{
+    text-decoration: none;
+}
+    .A{
+    position: absolute;
+    top: 35px;
+    right: 5%;
+}
+.subA{
+    position: absolute;
+    left: -650px;
+    top:2px;
+}
+.B{
+    position: absolute;
+    top: 150px;
+    left: 20%;
+    text-align: center;
+}
+.C{
+    position: absolute;
+    top: 500px;
+    left: 12%;
+    padding: 10px;
+}
+.D{
+    position: absolute;
+    top: 2200px;
+}
+.Done{
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    font-size: 15px;
+}
+.Dtwo{
+    position: absolute;
+    top: 20px;
+    left: 390px;
+    font-size: 15px;
+}
+ /* image-hover */
+
+ 
+/* Style for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position - stays in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0,0,0,0.5); /* Black with opacity */
+}
+
+/* Modal content */
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%; /* Adjust max-width as needed */
+  max-height: 80%; /* Adjust max-height as needed */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+</style>
+</head>
+<body>
+    <div class="full">
+        <div class="A">
+            <div class="subA">
+                <th><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjU5IiB2aWV3Qm94PSIwIDAgMTM0IDU5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMCA1LjM2NjY1SDcuNzM3NTNMMjQuNDA0MSAyNy4wMzExVjUuMzY2NjVIMzMuOTI3NVY0NC42NTE2SDI2LjE5TDkuNTIzMzQgMjMuMDQ1VjQ0LjY1MTZIMFY1LjM2NjY1Wk00NS4yMzY2IDUuNTk4NzFlLTA1QzQ2LjI5NjMgNS41OTg3MWUtMDUgNDcuMzMyMSAwLjMxNDI2NiA0OC4yMTMxIDAuOTAyOTUxQzQ5LjA5NDEgMS40OTE2NCA0OS43ODA4IDIuMzI4MzYgNTAuMTg2MyAzLjMwNzNDNTAuNTkxOCA0LjI4NjI1IDUwLjY5NzkgNS4zNjM0NSA1MC40OTEyIDYuNDAyN0M1MC4yODQ0IDcuNDQxOTQgNDkuNzc0MiA4LjM5NjU1IDQ5LjAyNDkgOS4xNDU4QzQ4LjI3NTcgOS44OTUwNSA0Ny4zMjExIDEwLjQwNTMgNDYuMjgxOCAxMC42MTJDNDUuMjQyNiAxMC44MTg3IDQ0LjE2NTQgMTAuNzEyNiA0My4xODY0IDEwLjMwNzJDNDIuMjA3NSA5LjkwMTY2IDQxLjM3MDggOS4yMTQ5OCA0MC43ODIxIDguMzMzOTVDNDAuMTkzNCA3LjQ1MjkyIDM5Ljg3OTIgNi40MTcxMSAzOS44NzkyIDUuMzU3NTFDMzkuODc2IDQuNjUzMDUgNDAuMDEyMyAzLjk1NDk0IDQwLjI4MDQgMy4zMDM0OUM0MC41NDg1IDIuNjUyMDQgNDAuOTQzIDIuMDYwMTUgNDEuNDQxMiAxLjU2MjAyQzQxLjkzOTMgMS4wNjM4OSA0Mi41MzEyIDAuNjY5Mzg2IDQzLjE4MjYgMC40MDEyOTJDNDMuODM0MSAwLjEzMzE5OCA0NC41MzIyIC0wLjAwMzE3MTggNDUuMjM2NiA1LjU5ODcxZS0wNVY1LjU5ODcxZS0wNVpNNDkuOTk2OCAxNC44ODA5VjQ0LjY0MjRINDAuNDczNVYxNC44OUw0OS45OTY4IDE0Ljg4MDlaTTYxLjMwNiA0OC4xNTAxQzYyLjM2NDYgNDguMTUxOSA2My4zOTkxIDQ4LjQ2NzMgNjQuMjc4NiA0OS4wNTY2QzY1LjE1ODIgNDkuNjQ1OCA2NS44NDM1IDUwLjQ4MjUgNjYuMjQ3OSA1MS40NjA5QzY2LjY1MjMgNTIuNDM5MiA2Ni43NTc4IDUzLjUxNTUgNjYuNTUxMSA1NC41NTM4QzY2LjM0NDMgNTUuNTkyMiA2NS44MzQ2IDU2LjU0NTkgNjUuMDg2MiA1Ny4yOTQ3QzY0LjMzNzggNTguMDQzNiA2My4zODQzIDU4LjU1MzkgNjIuMzQ2MSA1OC43NjEyQzYxLjMwNzkgNTguOTY4NiA2MC4yMzE2IDU4Ljg2MzcgNTkuMjUyOSA1OC40NTk4QzU4LjI3NDMgNTguMDU1OSA1Ny40MzczIDU3LjM3MTEgNTYuODQ3NSA1Ni40OTE5QzU2LjI1NzggNTUuNjEyNyA1NS45NDE4IDU0LjU3ODQgNTUuOTM5NCA1My41MTk3QzU1LjkzNDUgNTIuODEzNSA1Ni4wNyA1Mi4xMTMzIDU2LjMzNzkgNTEuNDU5OEM1Ni42MDU4IDUwLjgwNjQgNTcuMDAwOSA1MC4yMTI2IDU3LjUwMDIgNDkuNzEzMUM1Ny45OTk0IDQ5LjIxMzUgNTguNTkzIDQ4LjgxODEgNTkuMjQ2MyA0OC41NDk4QzU5Ljg5OTYgNDguMjgxNSA2MC41OTk3IDQ4LjE0NTYgNjEuMzA2IDQ4LjE1MDFWNDguMTUwMVpNNTYuNTQ4OSAxNC44OUg2Ni4wNzIyVjQ0LjY1MTZINTYuNTQ4OVYxNC44OVpNODYuMzY4MyAxNC4yODA1Qzk0LjA0NDkgMTQuMjgwNSA5OC42MjgzIDE4LjA4OTggMTAwLjY1MiAyMy41NjYxTDkxLjI0NzMgMjYuMzYwN0M5MC41MzQyIDI0LjM5ODEgODguODA5NCAyMy4yMDY1IDg2LjM3MTQgMjMuMjA2NUM4Mi44NTc3IDIzLjIwNjUgODAuNTM4NSAyNS44Mjc0IDgwLjUzODUgMjkuNzU1NkM4MC41Mzg1IDMzLjY4MzcgODIuODU3NyAzNi4zMDE1IDg2LjM3MTQgMzYuMzAxNUM4OC43NTE1IDM2LjMwMTUgOTAuNTM3MyAzNS4zNTA3IDkxLjU1MjEgMzMuMzg1MUwxMDAuMDY0IDM3LjI1NTRDOTguMDk4MSA0MS4zNjAzIDkzLjUxNDcgNDUuMjMwNiA4Ni4yNTU2IDQ1LjIzMDZDNzYuODUxMSA0NS4yMzA2IDcwLjYwMDcgMzguOTgwMyA3MC43MTM1IDI5Ljc1NTZDNzAuODI5MyAyMC40MTgxIDc2Ljg5OTkgMTQuMjk1NyA4Ni4zNjUzIDE0LjI5NTdMODYuMzY4MyAxNC4yODA1Wk0xMTguMzMgMTQuMjgwNUMxMjcuODU0IDE0LjI4MDUgMTMzLjMzIDIxLjY1ODQgMTMzLjMzIDMwLjM0OThDMTMzLjMzMyAzMS4xNjU5IDEzMy4yNzMgMzEuOTgxIDEzMy4xNSAzMi43ODc4SDExMi4xOTZDMTEyLjg1MSAzNi4wNjA4IDExNC45MzggMzcuNDkgMTE4LjkyMSAzNy40OUMxMjEuODM4IDM3LjQ5IDEyMy44NjEgMzYuNTM2MiAxMjUuMDUzIDM1LjM1NjhMMTMxLjEyMyA0MC4wNTkxQzEyOC4yNjggNDMuMjcxMSAxMjMuOTIyIDQ1LjIzOTggMTE4LjYyOSA0NS4yMzk4QzEwOC44MDcgNDUuMjM5OCAxMDIuNTU3IDM5LjEwODIgMTAyLjU1NyAyOS43NjQ3QzEwMi41NjYgMjAuNzIyOSAxMDguNjI0IDE0LjI5NTcgMTE4LjMyNyAxNC4yOTU3TDExOC4zMyAxNC4yODA1Wk0xMjMuNzQ2IDI2LjQyMTZDMTIzLjI3IDIzLjgwMzggMTIxLjE4NiAyMi4wMTggMTE4LjAzMiAyMi4wMThDMTE1LjA1NyAyMi4wMTggMTEzLjAzNCAyMy4zMjU0IDExMi4yNiAyNi40MjE2SDEyMy43NDZaIiBmaWxsPSIjMDAwMDAwIi8+Cjwvc3ZnPgoKCgo="height="50px" width="80px"></th>
+                </div>
+         <table>
+            <tr>
+                 <th style="padding:5px ;"><a href="">Pricing</a></th>
+                 <th style="padding:5px ;"><a href="coustmer.html">Customer</a></th>
+                 <th style="padding:5px ;"><a href="">Examples</a></th>
+                 <th style="padding:5px ;"><a href="template.html">Templates</a></th>
+                 <th style="padding:5px ;"><a href="">Resorces</a></th>
+                 <th>|</th>
+                 <th style="padding:5px ;"><a href="sigin.html">sign in</a></th>
+                 <th style="padding:5px ;"><a href="hub.html"><button style="border-radius: 5px;background-color: black; color: white;">Sign up for free</button></a></th>
+            </tr>
+         </table>
+        </div><br>
+        
+            <div class="B">
+            <h1 style="font-size: 100px;">Template gallery</h1> <br>
+            <p style="color: red; font-size: 20px;">Hit the ground running with our ready-to-use templates</p>
+            <p><input style="border-radius: 20px;" type="text" placeholder="Search for a Template"></p>
+            </div>
+             <div class="C model" >
+                <table>
+                    
+                    <tr>
+                        <th style="padding: 0px 20px 0px 20px; background:black;"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/07/Socia-Media-Playbook-1.png"  height="200px" width="300px"></th>
+                        <th style="padding: 0px 20px 0px 20px; background:blue;"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/07/Tone-of-voice-2-768x432.png" height="200px" width="300px"></th>
+                        <th style="padding: 0px 20px 0px 20px; background:red;"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Screenshot-2022-05-11-at-15.03.40-800x500.png" height="200px" width="300px"></th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><b>social Media playbook</b></td>
+                        <td style="text-align: center;"> <b>Brand tone & voice</b></td>
+                        <td style="text-align: center;"><b>color Libary</b></td>
+                    </tr>
+
+                    <tr>
+                        <th><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Screenshot-2022-05-16-at-12.30.33-800x500.png" height="200px" width="300px" ></th>
+                        <th><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Icon-Library-1-768x432.png" height="200px" width="300px"></th>
+                        <th><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Screenshot-2022-05-11-at-11.49.01-800x500.png" height="200px" width="300px"></th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;"><b>illustaction</b></td>
+                        <td style="text-align: center;"><b>icon Libary</b></td>
+                        <td style="text-align: center;"><b>Logo Libary</b></td>
+                    </tr>
+
+                   <tr>
+                    <th bgcolor="blue"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Inspiration-Library-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="pink"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Instagram-768x432.png   " height="200px" width="300px"></th>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Moodboard-768x432.png" height="200px" width="300px"></th>
+                   </tr>
+                   <tr>
+                    <td style="text-align: center;"><b>inspiration Libary</b></td>
+                    <td style="text-align: center;"><b>Istagram</b></td>
+                    <td style="text-align: center;"><b>Moodboard</b></td>
+                </tr>
+
+                <tr>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Contact-Sheet-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Content-Calendar-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Style-story-768x432.png" height="200px" width="300px"></th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><b>Contact Sheet</b></td>
+                    <td style="text-align: center;"><b>Content Calendar</b></td>
+                    <td style="text-align: center;"><b>Style story</b></td>
+                </tr>
+
+                <tr>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Tall-moodboard-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Storyboard-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="blue"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Video-Library-1-768x432.png" height="200px" width="300px"></th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><b>Tall Moodboard</b></td>
+                    <td style="text-align: center;"><b>Story board</b></td>
+                    <td style="text-align: center;"><b>Asset Libary</b></td>
+                </tr>
+
+                <tr>
+                    <th bgcolor="orange"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Project-Board-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="blue"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Photo-Library-768x432.png" height="200px" width="300px"></th>
+                    <th bgcolor="blue"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Font-library-768x432.png" height="200px" width="300px"></th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><b>Project board</b></td>
+                    <td style="text-align: center;"><b>Photo Libary</b></td>
+                    <td style="text-align: center;"><b>Font Libary</b></td>
+                </tr>
+                <tr>
+                    <th bgcolor="pink"><img src="https://niice.dreamhosters.com/wp-content/uploads/2022/05/Guidelines-1-768x432.png" height="200px" width="300px"></th>
+                </tr>
+                <tr>
+                    <td style="text-align: center;"><b>Brand Guideliness Template</b></td>
+                </tr>
+                </table>
+             </div>
+             <div class="D"> 
+                <p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTM0IiBoZWlnaHQ9IjU5IiB2aWV3Qm94PSIwIDAgMTM0IDU5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMCA1LjM2NjY1SDcuNzM3NTNMMjQuNDA0MSAyNy4wMzExVjUuMzY2NjVIMzMuOTI3NVY0NC42NTE2SDI2LjE5TDkuNTIzMzQgMjMuMDQ1VjQ0LjY1MTZIMFY1LjM2NjY1Wk00NS4yMzY2IDUuNTk4NzFlLTA1QzQ2LjI5NjMgNS41OTg3MWUtMDUgNDcuMzMyMSAwLjMxNDI2NiA0OC4yMTMxIDAuOTAyOTUxQzQ5LjA5NDEgMS40OTE2NCA0OS43ODA4IDIuMzI4MzYgNTAuMTg2MyAzLjMwNzNDNTAuNTkxOCA0LjI4NjI1IDUwLjY5NzkgNS4zNjM0NSA1MC40OTEyIDYuNDAyN0M1MC4yODQ0IDcuNDQxOTQgNDkuNzc0MiA4LjM5NjU1IDQ5LjAyNDkgOS4xNDU4QzQ4LjI3NTcgOS44OTUwNSA0Ny4zMjExIDEwLjQwNTMgNDYuMjgxOCAxMC42MTJDNDUuMjQyNiAxMC44MTg3IDQ0LjE2NTQgMTAuNzEyNiA0My4xODY0IDEwLjMwNzJDNDIuMjA3NSA5LjkwMTY2IDQxLjM3MDggOS4yMTQ5OCA0MC43ODIxIDguMzMzOTVDNDAuMTkzNCA3LjQ1MjkyIDM5Ljg3OTIgNi40MTcxMSAzOS44NzkyIDUuMzU3NTFDMzkuODc2IDQuNjUzMDUgNDAuMDEyMyAzLjk1NDk0IDQwLjI4MDQgMy4zMDM0OUM0MC41NDg1IDIuNjUyMDQgNDAuOTQzIDIuMDYwMTUgNDEuNDQxMiAxLjU2MjAyQzQxLjkzOTMgMS4wNjM4OSA0Mi41MzEyIDAuNjY5Mzg2IDQzLjE4MjYgMC40MDEyOTJDNDMuODM0MSAwLjEzMzE5OCA0NC41MzIyIC0wLjAwMzE3MTggNDUuMjM2NiA1LjU5ODcxZS0wNVY1LjU5ODcxZS0wNVpNNDkuOTk2OCAxNC44ODA5VjQ0LjY0MjRINDAuNDczNVYxNC44OUw0OS45OTY4IDE0Ljg4MDlaTTYxLjMwNiA0OC4xNTAxQzYyLjM2NDYgNDguMTUxOSA2My4zOTkxIDQ4LjQ2NzMgNjQuMjc4NiA0OS4wNTY2QzY1LjE1ODIgNDkuNjQ1OCA2NS44NDM1IDUwLjQ4MjUgNjYuMjQ3OSA1MS40NjA5QzY2LjY1MjMgNTIuNDM5MiA2Ni43NTc4IDUzLjUxNTUgNjYuNTUxMSA1NC41NTM4QzY2LjM0NDMgNTUuNTkyMiA2NS44MzQ2IDU2LjU0NTkgNjUuMDg2MiA1Ny4yOTQ3QzY0LjMzNzggNTguMDQzNiA2My4zODQzIDU4LjU1MzkgNjIuMzQ2MSA1OC43NjEyQzYxLjMwNzkgNTguOTY4NiA2MC4yMzE2IDU4Ljg2MzcgNTkuMjUyOSA1OC40NTk4QzU4LjI3NDMgNTguMDU1OSA1Ny40MzczIDU3LjM3MTEgNTYuODQ3NSA1Ni40OTE5QzU2LjI1NzggNTUuNjEyNyA1NS45NDE4IDU0LjU3ODQgNTUuOTM5NCA1My41MTk3QzU1LjkzNDUgNTIuODEzNSA1Ni4wNyA1Mi4xMTMzIDU2LjMzNzkgNTEuNDU5OEM1Ni42MDU4IDUwLjgwNjQgNTcuMDAwOSA1MC4yMTI2IDU3LjUwMDIgNDkuNzEzMUM1Ny45OTk0IDQ5LjIxMzUgNTguNTkzIDQ4LjgxODEgNTkuMjQ2MyA0OC41NDk4QzU5Ljg5OTYgNDguMjgxNSA2MC41OTk3IDQ4LjE0NTYgNjEuMzA2IDQ4LjE1MDFWNDguMTUwMVpNNTYuNTQ4OSAxNC44OUg2Ni4wNzIyVjQ0LjY1MTZINTYuNTQ4OVYxNC44OVpNODYuMzY4MyAxNC4yODA1Qzk0LjA0NDkgMTQuMjgwNSA5OC42MjgzIDE4LjA4OTggMTAwLjY1MiAyMy41NjYxTDkxLjI0NzMgMjYuMzYwN0M5MC41MzQyIDI0LjM5ODEgODguODA5NCAyMy4yMDY1IDg2LjM3MTQgMjMuMjA2NUM4Mi44NTc3IDIzLjIwNjUgODAuNTM4NSAyNS44Mjc0IDgwLjUzODUgMjkuNzU1NkM4MC41Mzg1IDMzLjY4MzcgODIuODU3NyAzNi4zMDE1IDg2LjM3MTQgMzYuMzAxNUM4OC43NTE1IDM2LjMwMTUgOTAuNTM3MyAzNS4zNTA3IDkxLjU1MjEgMzMuMzg1MUwxMDAuMDY0IDM3LjI1NTRDOTguMDk4MSA0MS4zNjAzIDkzLjUxNDcgNDUuMjMwNiA4Ni4yNTU2IDQ1LjIzMDZDNzYuODUxMSA0NS4yMzA2IDcwLjYwMDcgMzguOTgwMyA3MC43MTM1IDI5Ljc1NTZDNzAuODI5MyAyMC40MTgxIDc2Ljg5OTkgMTQuMjk1NyA4Ni4zNjUzIDE0LjI5NTdMODYuMzY4MyAxNC4yODA1Wk0xMTguMzMgMTQuMjgwNUMxMjcuODU0IDE0LjI4MDUgMTMzLjMzIDIxLjY1ODQgMTMzLjMzIDMwLjM0OThDMTMzLjMzMyAzMS4xNjU5IDEzMy4yNzMgMzEuOTgxIDEzMy4xNSAzMi43ODc4SDExMi4xOTZDMTEyLjg1MSAzNi4wNjA4IDExNC45MzggMzcuNDkgMTE4LjkyMSAzNy40OUMxMjEuODM4IDM3LjQ5IDEyMy44NjEgMzYuNTM2MiAxMjUuMDUzIDM1LjM1NjhMMTMxLjEyMyA0MC4wNTkxQzEyOC4yNjggNDMuMjcxMSAxMjMuOTIyIDQ1LjIzOTggMTE4LjYyOSA0NS4yMzk4QzEwOC44MDcgNDUuMjM5OCAxMDIuNTU3IDM5LjEwODIgMTAyLjU1NyAyOS43NjQ3QzEwMi41NjYgMjAuNzIyOSAxMDguNjI0IDE0LjI5NTcgMTE4LjMyNyAxNC4yOTU3TDExOC4zMyAxNC4yODA1Wk0xMjMuNzQ2IDI2LjQyMTZDMTIzLjI3IDIzLjgwMzggMTIxLjE4NiAyMi4wMTggMTE4LjAzMiAyMi4wMThDMTE1LjA1NyAyMi4wMTggMTEzLjAzNCAyMy4zMjU0IDExMi4yNiAyNi40MjE2SDEyMy43NDZaIiBmaWxsPSIjMDAwMDAwIi8+Cjwvc3ZnPgoKCgo=" height="90px" width="80px"></p>
+                <p class="Done">Features <br> Pricing <br> Showcase <br> Blog <br> Insights <br> Inspiration</p>
+                <div class="Dtwo">
+                   <p> Integrations <br> Browser extension <br> Changelog <br> Help <br>   Careers</p>   
+                </div>
+                </div>
+    </div>
+    
+</body>
+</html>
